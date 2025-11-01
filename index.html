@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yves Martin</title>
+  <title>Yves Martin des Taillades</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -11,57 +11,368 @@
       color: #222;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
     .container {
-      text-align: center;
-      max-width: 600px;
-      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px 24px;
+    }
+    .card {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      padding: 32px;
     }
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 8px 0;
       font-size: 2.2rem;
     }
     h2 {
       font-weight: normal;
       color: #555;
-      margin-bottom: 25px;
+      margin: 0 0 18px 0;
+    }
+    h3 {
+      margin: 36px 0 10px 0;
+      font-size: 1.2rem;
     }
     p {
       line-height: 1.6;
       color: #444;
-      margin-bottom: 30px;
+      margin: 0 0 16px 0;
+    }
+    ul {
+      margin: 0 0 14px 20px;
+    }
+    .links {
+      margin: 12px 0 28px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .links a {
       text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      margin: 0 10px;
-      transition: opacity 0.2s;
+      color: #1f4fd1;
+      font-weight: 600;
+      transition: all 0.15s ease;
     }
     .links a:hover {
-      opacity: 0.7;
+      opacity: 0.9;
+    }
+    .link-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eef3ff;
+      border: 1px solid #dfe7ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+    .link-button:hover {
+      background: #e6eeff;
+      border-color: #d4dfff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(31,79,209,0.12);
+    }
+    .link-button svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+    .section {
+      margin-top: 36px;
+    }
+    .section + .section {
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+    }
+    .muted {
+      color: #666;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .header-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #eee;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: block;
+      margin: 0;
+    }
+    .header-avatar { width: 168px; height: 168px; }
+    @media (max-width: 640px) {
+      .header { flex-direction: column; align-items: flex-start; }
+      .header-avatar { width: 120px; height: 120px; margin-top: 6px; }
+    }
+    /* Details and media */
+    details {
+      margin: 12px 0 20px 0;
+      padding: 12px 14px;
+      background: #fbfcff;
+      border: 1px solid #eef0f5;
+      border-radius: 10px;
+    }
+    details[open] {
+      background: #fff;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    .summary-links {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 10px;
+      vertical-align: middle;
+      flex-wrap: wrap;
+    }
+    .summary-links .link-button { padding: 6px 10px; }
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+    .media-small {
+      max-width: 420px;
+      margin: 8px auto 0 auto;
+    }
+    .section img.media-tiny {
+      width: auto;
+      max-width: 200px;
+      margin: 8px auto 0 auto;
+    }
+    .gallery {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 8px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Yves Martin</h1>
-    <h2>AI Engineer · Weather & Physics · San Francisco</h2>
-    <p>
-      I build machine learning systems for weather forecasting, large-scale physical modeling, 
-      and creative side projects. Previously Stanford RNA research. Currently at Atmo.
-    </p>
-    <div class="links">
-      <a href="mailto:yves@martin.yt">Email</a>
-      <a href="https://www.linkedin.com/in/your-link">LinkedIn</a>
-      <a href="https://github.com/your-github">GitHub</a>
+      <div class="card">
+        <div class="header">
+          <div class="header-text">
+            <h1>Yves Martin</h1>
+            <p class="muted">“You can’t manage what you can’t measure.” - Peter Drucker</p>
+            <h2>I model the world - weather, RNA, and soft robots - and build things on the side.</h2>
+            <div class="links">
+              <a class="link-button" href="mailto:yves@martin.yt" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 0l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Email</span>
+              </a>
+              <a class="link-button" href="https://www.linkedin.com/in/yves-martin-b2a093131/" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5.001 2.5 2.5 0 0 0 0-5zM4 9h2v12H4zM9 9h1.943v1.64h.028c.27-.51 1.03-1.048 2.12-1.048 2.27 0 2.69 1.36 2.69 3.127V21H13.9v-6.18c0-1.475-.03-3.37-2.055-3.37-2.06 0-2.376 1.6-2.376 3.26V21H9V9z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="link-button" href="https://github.com/taillades" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.22.7-3.9-1.39-3.9-1.39-.53-1.35-1.28-1.71-1.28-1.71-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.57-.29-5.27-1.29-5.27-5.72 0-1.27.46-2.31 1.2-3.13-.12-.29-.52-1.47.11-3.07 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.6.23 2.78.11 3.07.75.82 1.2 1.86 1.2 3.13 0 4.44-2.7 5.42-5.28 5.71.41.36.78 1.07.78 2.17v3.22c0 .31.21.67.79.56A11.5 11.5 0 0 0 12 .5z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a class="link-button" href="https://scholar.google.com/citations?user=4hv45ZoAAAAJ&hl=en#" aria-label="Google Scholar">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3l9 7-9 7-9-7 9-7zm0 9l6.5 5.05A9 9 0 0 1 12 21a9 9 0 0 1-6.5-3.95L12 12z"/>
+                </svg>
+                <span>Scholar</span>
+              </a>
+              <a class="link-button" href="https://x.com/YvesMartin604" aria-label="X profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5 3h3L14 10.59 21.5 21h-6l-4.5-6-5 6H3l7.5-9.01L3.5 3h6l4 5 4-5z"/>
+                </svg>
+                <span>X</span>
+              </a>
+            </div>
+          </div>
+          <img src="images/portrait_yves_martin.png" alt="Yves Martin" class="avatar header-avatar" />
+        </div>
+
+      
+
+      <div class="section" id="research-weather">
+        <h3>Research: Weather</h3>
+        <p>I work at the intersection of AI and physics, developing AI models for global and regional forecasts, and more. Sadly, the exciting research we do at Atmo isn't public.</p>
+        
+      </div>
+
+      <div class="section" id="research-rna">
+        <h3>Research: RNA</h3>
+        <p>RNA is a programmable polymer - a chain of nucleotides that folds via base-pairing and stacking. Its structure - secondary (pairs and loops) and tertiary (3D shape) - governs function in gene regulation, translation, and viral replication. Modeling RNA structure helps interpret experiments and design sequences with desired behaviors.</p>
+        <details>
+          <summary><strong>eFold</strong>: an AI model to predict the RNA structure
+            <span class="summary-links">
+              <a class="link-button" href="https://www.biorxiv.org/content/10.1101/2024.01.24.577093v1" aria-label="Preprint">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Paper</span>
+              </a>
+              <a class="link-button" href="http://github.com/rouskinlab/dmsensei" aria-label="Code">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Code</span>
+              </a>
+              <a class="link-button" href="https://rnandria.org/app/rnandria/database-659f36682f84e02b0ff732d7" aria-label="Data">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" stroke="currentColor" stroke-width="2"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Data</span>
+              </a>
+            </span>
+          </summary>
+          <p>
+            The effort expands training diversity and introduces eFold, an AlphaFold-inspired architecture adapted to RNA. By mixing probing-backed structures and synthetic constructs, the model reduces overfitting to short/simple motifs and improves long/complex sequence performance.
+          </p>
+          <img alt="RNA project visual" src="images/rna_overview.png" style="max-width:100%;border-radius:8px;margin-top:8px;" />
+        </details>
+        <details>
+          <summary><strong>SEISMIC</strong> - DMS-MaPseq processing and DREEM clustering
+            <span class="summary-links">
+              <a class="link-button" href="https://github.com/rouskinlab/seismic-rna" aria-label="Code">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Code</span>
+              </a>
+            </span>
+          </summary>
+          <p>
+            DMS-MaPseq is a chemical probing method where dimethyl sulfate modifies flexible A and C bases. During reverse transcription, these modifications cause characteristic mutations, so sequencing yields per-nucleotide reactivity that reports local structure. RNAs often adopt multiple conformations at the same time, so different reads reflect different folds. Clustering reads by shared mutation patterns separates co-existing structures into ensembles instead of averaging them, which makes downstream modeling more accurate. SEISMIC computes these reactivities and performs clustering at scale.
+          </p>
+          <img alt="SEISMIC visual" src="images/seismic_overview.png" class="media-tiny" />
+        </details>
+        <details>
+          <summary><strong>SEISMOGraph</strong> - web visualization for chemical probing
+            <span class="summary-links">
+              <a class="link-button" href="https://draw-385021.ue.r.appspot.com/" aria-label="Demo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg>
+                <span>Demo</span>
+              </a>
+              <a class="link-button" href="https://github.com/rouskinlab/seismic-graph" aria-label="Code">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Code</span>
+              </a>
+            </span>
+          </summary>
+          <p>
+            A React/Python app for uploading reactivities, aligning sequences, and exploring tracks with arcs and base-pair overlays. Compatible with SHAPEmapper and SEISMIC outputs; ships as a Python package or hosted demo.
+          </p>
+          
+        </details>
+      </div>
+
+      <div class="section" id="research-soft-robotics">
+        <h3>Research: Soft robotics</h3>
+        <p>Rapid prototyping and modeling: IMU-based proprioception for long soft arms and data-driven origami kinematics.</p>
+        <details>
+          <summary><strong>IMU proprioception for soft arms</strong> - IROS 2022
+            <span class="summary-links">
+              <a class="link-button" href="https://ieeexplore.ieee.org/abstract/document/9982185" aria-label="Paper">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Paper</span>
+              </a>
+              <a class="link-button" href="https://github.com/yvesmartindestaillades/State-Estimator-for-Soft-Arm-SESA" aria-label="Code">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Code</span>
+              </a>
+            </span>
+          </summary>
+          <p>
+            An 80-cm hyper-redundant arm instrumented with IMUs along its body. Orientation chains fuse gyro/accel with a geometric prior to reconstruct shape, reaching >90% accuracy at low cost and minimal calibration.
+          </p>
+          <img alt="Soft arm IMU" src="images/soft_arm_imu.gif" style="max-width:100%;border-radius:8px;margin-top:8px;" />
+        </details>
+        <details>
+          <summary><strong>Double-Waterbomb origami kinematics</strong>
+            <span class="summary-links">
+              <a class="link-button" href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.202400217" aria-label="Wiley DOI">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Paper</span>
+              </a>
+            </span>
+          </summary>
+          <p>
+            A rigid panels + flexible hinges mechanism with hidden DOFs. A data-driven model maps actuator states to pose for control without deriving full analytical kinematics on the multilink structure.
+          </p>
+          <img alt="Double-Waterbomb" src="images/waterbomb.webp" class="media-small" />
+        </details>
+      </div>
+
+      <div class="section" id="personal-projects">
+        <h3>Personal projects</h3>
+        <p>Hands-on builds: from anti-tremor mechanisms to IoT systems and custom mechanisms.</p>
+        <details>
+          <summary><strong>ATPen</strong> - mechanical low-pass filter for tremor</summary>
+          <p>
+            A pen with a tuned mass/suspension that attenuates high-frequency hand tremors while passing intentional low-frequency motion, improving handwriting legibility. Built via iterative FEM-guided design and patient tests.
+            <a href="https://www.linkedin.com/posts/debiopharminternational_finalist-2021-pen-project-activity-6861938879230967808-yhvY/">Pitch</a> ·
+            <a href="https://espacec.ch/challenge-debiopharm-la-solution-inartis-2021-and-the-winner-iswheelywasher/">Press</a>
+          </p>
+          <img alt="ATPen" src="images/atpen_header.png" style="max-width:100%;border-radius:8px;margin-top:8px;" />
+        </details>
+        <details>
+          <summary><strong>Snap-off mechanism knife</strong></summary>
+          <p>
+            A machined aluminum/steel utility knife with a spring-latched rotating bar that locks the blade open/closed. Depressing the spring disengages the latch to re-position the blade; locks snap in at end stops.
+          </p>
+          <div class="gallery">
+            <img alt="Knife 1" src="images/knife_1.jpeg" />
+            <img alt="Knife 2" src="images/knife_2.jpeg" />
+          </div>
+        </details>
+        <details>
+          <summary><strong>Odeji</strong> - smart meeting organizer (IoT + Web + App)</summary>
+          <p>
+            An IoT device with LEDs and a custom PCB connects to a webapp and Android app. A simple architecture syncs schedules and timing, giving the host real-time cues to keep meetings on track.
+            <a href="https://chi.camp/projects/team-3-2019-2020/">Project</a>
+          </p>
+          <div class="gallery">
+            <img alt="Odeji diagram" src="images/odeji_arch.png" />
+            <img alt="Odeji webapp" src="images/odeji_webapp.png" />
+            <img alt="Odeji hardware" src="images/odeji_hardware.png" />
+            <img alt="Odeji peripherals" src="images/odeji_peripherals.png" />
+          </div>
+        </details>
+        <details>
+          <summary><strong>Smart mirror</strong> - bathroom health mirror</summary>
+          <p>
+            A wall mirror with embedded camera and UI widgets captures daily frames and plays a fast-forward of appearance changes, alongside health metrics and goals.
+          </p>
+          <img alt="Smart mirror" src="images/smart_mirror.gif" style="max-width:100%;border-radius:8px;margin-top:8px;" />
+        </details>
+        <details>
+          <summary><strong>SubliminAI</strong> - ControlNet images with hidden messages</summary>
+          <p>
+            The system encodes a user word into a black-white map used as seed/control for a diffusion model via ControlNet, steering images to subtly contain the text. Prompt reformulations generate frames stitched into a GIF.
+          </p>
+          <img alt="SubliminAI Tuscany" src="images/subliminai_tuscany.png" style="max-width:100%;border-radius:8px;margin-top:8px;" />
+        </details>
+        <details>
+          <summary><strong>Qualicall.AI</strong> - customizable QA for contact centers</summary>
+          <p>
+            A scoring engine tailored per client with domain-specific question sets, call emotion analysis, and flexible weighting. Built for smaller centers to get actionable QA without heavy integration.
+          </p>
+        </details>
+      </div>
+
+      <div class="section" id="manifesto">
+        <h3>Manifesto</h3>
+        <p class="muted">“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.” - Stephen Hawking. <br>
+        <p>I pledge to bow my convictions to evidence and reason and not to my interests. I believe that humility and truth-seeking is the ultimate pathway to peace, justice and prosperity in the world. I believe in the right to admit being wrong. Rationalism is a humanism.</p>
+      </div>
     </div>
   </div>
 </body>
